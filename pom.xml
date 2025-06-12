@@ -35,12 +35,17 @@
         <mysql-connector-j.version>9.2.0</mysql-connector-j.version>
         <web.version>3.3.4</web.version>
         <knife4j-openapi3.version>4.1.0</knife4j-openapi3.version>
+        <springdoc.version>2.2.0</springdoc.version>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
             <version>3.1.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
     <dependencyManagement>
@@ -97,12 +102,13 @@
                 <artifactId>fastjson2</artifactId>
                 <version>${fastjson2.version}</version>
             </dependency>
-            <!--添加Knife4j依赖-->
+            <!--SwaggerUI-->
             <dependency>
-                <groupId>com.github.xiaoymin</groupId>
-                <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
-                <version>${knife4j-openapi3.version}</version>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-boot-starter</artifactId>
+                <version>${swagger-ui.version}</version>
             </dependency>
+
             <!--spring-boot-starter-web依赖-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
